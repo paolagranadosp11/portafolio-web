@@ -8,18 +8,13 @@
   <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white" alt="SQL Server" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle" />
-  <img src="https://img.shields.io/badge/Lighthouse-100%25-success?style=flat-square&logo=lighthouse&logoColor=orange" alt="Lighthouse 100%" />
-</p>
+
 
 Este repositorio contiene el código fuente de mi **Portafolio Profesional Multi-Página**, diseñado y desarrollado a mano para presentar mi trayectoria y competencias como **DBA Senior** y **Cloud Architect**. El proyecto ha sido construido adhiriéndose estrictamente a estándares académicos y de rendimiento web (Lighthouse 100% en todas las categorías).
 
 ---
 
-## 🚀 Descripción del Proyecto
+##  Descripción del Proyecto
 
 El sitio web está estructurado para ofrecer una experiencia ejecutiva, técnica y altamente interactiva (UX/UI). Consta de una landing page centralizada que resume mi perfil y 6 subpáginas detalladas para profundizar en la arquitectura y resultados de mis proyectos más críticos.
 
@@ -34,7 +29,7 @@ El sitio web está estructurado para ofrecer una experiencia ejecutiva, técnica
 
 ---
 
-## 🛠️ Stack Tecnológico y Buenas Prácticas
+##  Stack Tecnológico y Buenas Prácticas
 
 El desarrollo del sitio se ha realizado de forma **puramente artesanal y nativa**, evitando el uso de frameworks o dependencias externas (cero React, Bootstrap, Tailwind o jQuery):
 
@@ -55,7 +50,7 @@ El desarrollo del sitio se ha realizado de forma **puramente artesanal y nativa*
 
 ---
 
-## 📐 Estructura de Directorios
+##  Estructura de Directorios
 
 ```text
 portfolio/
@@ -87,7 +82,7 @@ portfolio/
 
 ---
 
-## 💎 Detalles de Pulido y UX Premium
+##  Detalles de Pulido y UX Premium
 
 *   **Efecto Shrink-on-Scroll:** La cabecera se reduce suavemente de `80px` a `60px` y el avatar disminuye proporcionalmente cuando el usuario baja por la página, ganando una sombra sutil para flotar sobre el contenido.
 *   **Memojis sin Fondo:** Uso de la propiedad `mix-blend-mode: multiply;` que integra el avatar de memoji de forma transparente sobre la página crema, eliminando el fondo blanco de los archivos gráficos.
@@ -97,7 +92,7 @@ portfolio/
 
 ---
 
-## ⚙️ Configuración del Servidor (.htaccess)
+##  Configuración del Servidor (.htaccess)
 
 El archivo `.htaccess` del proyecto optimiza el rendimiento final en producción mediante directivas para el servidor Apache:
 *   **Compresión de Recursos:** Activa compresión **GZIP** y **Brotli** en archivos HTML, CSS, JavaScript, JSON y SVG.
@@ -105,7 +100,7 @@ El archivo `.htaccess` del proyecto optimiza el rendimiento final en producción
 
 ---
 
-## 🛠️ Instalación y Visualización Local
+##  Instalación y Visualización Local
 
 Dado que la aplicación utiliza tecnologías nativas del lado del cliente, no requiere compilación ni dependencias:
 
