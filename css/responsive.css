@@ -1,0 +1,550 @@
+/* responsive.css - Estilos adaptables para móviles y tablets */
+
+/* ======================================
+   MENÚ MÓVIL (hasta 768px)
+   Enfoque simple: el panel aparece debajo
+   del header con fade-in. Sin translateY
+   para evitar que los items queden ocultos.
+   ====================================== */
+@media screen and (max-width: 768px) {
+
+  /* Cabecera con altura fija y fondo totalmente sólido */
+  .header {
+    height: 70px;
+    min-height: 70px;
+    background-color: var(--color-bg-primary);
+    border-bottom: 0.0625rem solid var(--color-border-primary);
+    z-index: 200;
+  }
+
+  .header__container {
+    height: 70px;
+    padding: 0 1rem;
+  }
+
+  /* Panel del menú: posicionado exactamente debajo del header
+     y ocupa toda la pantalla restante. Z-index alto para estar
+     encima de cualquier sección o animación. */
+  .header__nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #fdfcfa;
+    border-top: 0.0625rem solid #e5e0d8;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 500;
+  }
+
+  /* Al añadir is-open, el panel aparece con un fade suave */
+  .header__nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  /* Lista de enlaces apilada en columna, ancho completo */
+  .header__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Separador entre cada enlace */
+  .header__nav-list li {
+    border-bottom: 0.0625rem solid var(--color-border-primary);
+  }
+
+  /* Enlace grande y cómodo para pulsar con el dedo */
+  .header__nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .header__nav-link:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-accent-primary);
+  }
+
+  .header__nav-link:active {
+    background-color: var(--color-bg-tertiary);
+  }
+
+  .header__nav-link.is-active {
+    color: var(--color-accent-primary);
+    background-color: var(--color-bg-secondary);
+  }
+
+  /* Quito el subrayado animado del desktop que no aplica en móvil */
+  .header__nav-link::after {
+    display: none;
+  }
+
+  /* Botón hamburguesa: simple, sin círculo que distrae */
+  .header__menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    gap: 0.35rem;
+    padding: 0;
+    z-index: 600;
+  }
+
+  .header__menu-btn-line {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Las líneas forman una X al activarse */
+  .header__menu-btn.is-active .header__menu-btn-line:nth-child(1) {
+    transform: translateY(0.47rem) rotate(45deg);
+  }
+  .header__menu-btn.is-active .header__menu-btn-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .header__menu-btn.is-active .header__menu-btn-line:nth-child(3) {
+    transform: translateY(-0.47rem) rotate(-45deg);
+  }
+}
+
+/* ======================================
+   TABLETS (481px hasta 768px)
+   ====================================== */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .hero__cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
+
+  .about__image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about__certs {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card--featured {
+    grid-column: span 2;
+  }
+
+  .skills__categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ======================================
+   ESCRITORIO (desde 769px en adelante)
+   ====================================== */
+@media screen and (min-width: 769px) {
+  .header__menu-btn {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-3xl);
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .skills__categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-detail__content {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .project-nav {
+    flex-direction: row;
+  }
+}
+
+/* ======================================
+   ESCRITORIO GRANDE (desde 1025px)
+   ====================================== */
+@media screen and (min-width: 1025px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+
+  .section {
+    padding: var(--space-4xl) 0;
+  }
+
+  .skills__categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills__tags {
+    justify-content: flex-start;
+  }
+
+  .testimonials__slide {
+    padding: 0 var(--space-2xl);
+  }
+}
+
+/* ======================================
+   PANTALLAS MUY ANCHAS (desde 1201px)
+   ====================================== */
+@media screen and (min-width: 1201px) {
+  :root {
+    --max-width: 1200px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-card--featured {
+    grid-column: span 2;
+  }
+}
+
+/* ======================================
+   MÓVIL EN MODO HORIZONTAL (landscape)
+   ====================================== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding: var(--space-xl) 0;
+  }
+
+  .header__nav {
+    overflow-y: auto;
+  }
+
+  .header__nav-link {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* ======================================
+   ALTO CONTRASTE DEL SISTEMA OPERATIVO
+   ====================================== */
+@media (forced-colors: active) {
+  .btn--primary {
+    border: 2px solid ButtonText;
+  }
+
+  .project-card,
+  .service-card,
+  .testimonial-card,
+  .skills__category {
+    border: 2px solid CanvasText;
+  }
+
+  .tag,
+  .badge {
+    border: 1px solid CanvasText;
+  }
+}
+
+/* ======================================
+   MÓVILES PEQUEÑOS (hasta 480px)
+   ====================================== */
+@media screen and (max-width: 480px) {
+  :root {
+    --space-lg: 0.875rem;
+    --space-xl: 1.25rem;
+    --space-2xl: 1.75rem;
+    --space-3xl: 2.25rem;
+    --space-4xl: 2.75rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding-top: 70px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    min-height: 3rem;
+    font-size: 1rem;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .about__image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about__image {
+    max-width: 170px;
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .about__stat {
+    padding: var(--space-md);
+  }
+
+  .about__certs {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .about__cert {
+    padding: var(--space-md);
+    min-height: 4.5rem;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .service-card {
+    padding: var(--space-lg);
+  }
+
+  .service-card__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .skills__categories {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .skills__category {
+    padding: var(--space-lg);
+  }
+
+  .skills__tags {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .skills__tags .tag {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    min-height: 2.75rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .project-card--featured {
+    grid-column: span 1;
+  }
+
+  .project-card--featured .project-card__media {
+    min-height: 180px;
+  }
+
+  /* Evita el zoom automático de iOS al enfocar inputs */
+  .form__input, .form__textarea, .form__select {
+    font-size: 1rem;
+    padding: 0.875rem;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .contact__social {
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .contact__social-link {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .project-detail__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* El sidebar ya no es sticky en móvil, ocupa todo el ancho */
+  .project-detail__sidebar {
+    position: static;
+    padding: var(--space-lg);
+  }
+
+  .project-detail__hero {
+    border-radius: 0.5rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .project-detail__nav {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .tabs__nav {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .tabs__btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    flex: 1 1 calc(50% - var(--space-xs));
+    text-align: center;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .metric {
+    padding: var(--space-md);
+  }
+
+  .lightbox__content {
+    max-width: 95vw;
+  }
+
+  .lightbox__image-wrapper {
+    padding: var(--space-sm);
+  }
+
+  .lightbox__image-wrapper img {
+    max-height: 45vh;
+  }
+
+  .lightbox__caption {
+    padding: var(--space-md);
+  }
+
+  .lightbox__close {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.75rem;
+  }
+}

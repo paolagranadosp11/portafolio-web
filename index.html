@@ -1,0 +1,796 @@
+<!-- Portafolio de Sandra Paola Granados Pachón - Landing page -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Sandra Paola Granados Pachón - DBA Senior, Ingeniera de Sistemas especializada en Cloud, BI y administración de bases de datos.">
+  <meta name="keywords" content="DBA, SQL Server, PostgreSQL, Azure, AWS, Power BI, Cloud, Business Intelligence, Bogotá">
+  <meta name="author" content="Sandra Paola Granados Pachón">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sandra Paola Granados | DBA Senior & Cloud Architect">
+  <meta property="og:description" content="Portafolio profesional - Soluciones de bases de datos, cloud computing y business intelligence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sandrapaola.dev">
+  <meta property="og:image" content="assets/memoji-paola.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sandra Paola Granados | DBA Senior & Cloud Architect">
+  <meta name="twitter:description" content="Portafolio profesional de Sandra Paola Granados - Especialista en bases de datos, cloud computing y business intelligence.">
+  <meta name="twitter:image" content="assets/memoji-paola.jpg">
+  
+  <title>Sandra Paola Granados | DBA Senior & Cloud Architect</title>
+  
+  <!-- Preconnect para Google Fonts (único) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================
+       HEADER - Navegación principal
+       ======================================== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" title="Sandra Paola Granados - Inicio">
+        <!-- Imagen del logo (Avatar Memoji) con contenedor y optimización -->
+        <div class="header__logo-avatar">
+          <picture>
+            <source srcset="assets/memoji-paola.webp" type="image/webp">
+            <img src="assets/memoji-paola.jpg" alt="Sandra Paola Granados" class="header__logo-img" loading="lazy">
+          </picture>
+        </div>
+        <span class="header__logo-text">
+          <span class="header__logo-name">Sandra Paola</span>
+          <span class="header__logo-role">DBA Senior · Cloud Architect</span>
+        </span>
+      </a>
+      
+      <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="header__nav-list">
+          <li><a href="#inicio" class="header__nav-link is-active" title="Ir a inicio">Inicio</a></li>
+          <li><a href="#sobre-mi" class="header__nav-link" title="Conoce más sobre mí">Sobre Mí</a></li>
+          <li><a href="#proyectos" class="header__nav-link" title="Ver mis proyectos">Proyectos</a></li>
+          <li><a href="#servicios" class="header__nav-link" title="Servicios que ofrezco">Servicios</a></li>
+          <li><a href="#habilidades" class="header__nav-link" title="Mis habilidades técnicas">Habilidades</a></li>
+          <li><a href="#testimonios" class="header__nav-link" title="Lo que dicen de mí">Testimonios</a></li>
+          <li><a href="#contacto" class="header__nav-link" title="Contáctame">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span class="header__menu-btn-line"></span>
+        <span class="header__menu-btn-line"></span>
+        <span class="header__menu-btn-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================
+         HERO - Sección principal
+         ======================================== -->
+    <section class="hero" id="inicio">
+      <video class="hero__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+        <source src="assets/hero-video.webm" type="video/webm">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      
+      <div class="hero__content">
+        <div class="hero__subtitle-wrapper">
+          <div class="hero__subtitle-track">
+            <span>DBA Senior | Cloud Architect | BI Specialist</span>
+            <span>DBA Senior | Cloud Architect | BI Specialist</span>
+          </div>
+        </div>
+        <h1 class="hero__title">
+          <span class="hero__title-line hero__title-line--1">Sandra Paola</span>
+          <span class="hero__title-line hero__title-line--2">Granados Pachón</span>
+        </h1>
+        <p class="hero__description">Ingeniera de Sistemas con MBA en Business Intelligence y Big Data. Más de 10 años transformando datos en decisiones estratégicas.</p>
+        
+        <div class="hero__cta">
+          <a href="#proyectos" class="btn btn--primary" title="Ver mis proyectos">
+            <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-eye"/></svg>
+            Ver Proyectos
+          </a>
+          <a href="#contacto" class="btn btn--secondary" title="Contáctame">
+            <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-send"/></svg>
+            Contactar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SOBRE MÍ - Perfil profesional
+         ======================================== -->
+    <section class="about section" id="sobre-mi">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__image-wrapper reveal reveal--left">
+            <!-- El GIF animado se usa directamente porque no tiene alternativa WebP con animación equivalente -->
+            <picture>
+              <source srcset="assets/memoji-paola.webp" type="image/webp">
+              <img src="assets/memoji-paola.jpg" alt="Sandra Paola Granados - DBA Senior" class="about__image" loading="lazy">
+            </picture>
+            <div class="about__image-decoration"></div>
+          </div>
+
+          <div class="about__content">
+            <h2 class="reveal">Sobre Mí</h2>
+            <p class="about__text reveal">
+              Soy Ingeniera de Sistemas con Máster en Project Management y MBA en Business Intelligence y Big Data. Con más de 10 años de experiencia en administración de bases de datos, cloud computing y análisis de datos, me apasiona transformar infraestructuras de datos críticas en soluciones eficientes y escalables.
+            </p>
+            <p class="about__text reveal">
+              Mi enfoque combina la excelencia técnica con la visión estratégica del negocio, permitiéndome liderar proyectos de migración, optimización y automatización que generan un impacto real en las organizaciones.
+            </p>
+
+            <ul class="about__stats reveal">
+              <li class="about__stat">
+                <div class="about__stat-number" data-counter="10" data-suffix="+">10+</div>
+                <div class="about__stat-label">Años de experiencia</div>
+              </li>
+              <li class="about__stat">
+                <div class="about__stat-number" data-counter="50" data-suffix="+">50+</div>
+                <div class="about__stat-label">Proyectos completados</div>
+              </li>
+              <li class="about__stat">
+                <div class="about__stat-number" data-counter="6" data-suffix="">6</div>
+                <div class="about__stat-label">Certificaciones</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificaciones a ancho completo de pantalla -->
+      <div class="about__certs-full">
+        <div class="about__certs reveal">
+          <!-- Certificaciones reales de Sandra Paola - Instituto Europeo de Posgrado -->
+          <button class="about__cert" data-lightbox="graduacion" aria-label="Ver foto de graduación">
+            <picture>
+              <source srcset="assets/cert-graduacion.webp" type="image/webp">
+              <img src="assets/cert-graduacion.jpg" alt="Ceremonia de graduación IEP" class="about__cert-thumb" loading="lazy">
+            </picture>
+            <div class="about__cert-info">
+              <span class="about__cert-title">Graduación IEP</span>
+              <span class="about__cert-institution">Instituto Europeo de Posgrado</span>
+              <span class="about__cert-year">2024</span>
+            </div>
+          </button>
+          <button class="about__cert" data-lightbox="master-pm" aria-label="Ver certificado Máster PM">
+            <picture>
+              <source srcset="assets/cert-master-pm.webp" type="image/webp">
+              <img src="assets/cert-master-pm.jpg" alt="Máster en Project Management IEP" class="about__cert-thumb" loading="lazy">
+            </picture>
+            <div class="about__cert-info">
+              <span class="about__cert-title">Máster PM</span>
+              <span class="about__cert-institution">Instituto Europeo de Posgrado</span>
+              <span class="about__cert-year">2024</span>
+            </div>
+          </button>
+          <button class="about__cert" data-lightbox="mba-bi" aria-label="Ver certificado MBA BI">
+            <picture>
+              <source srcset="assets/cert-mba-bi.webp" type="image/webp">
+              <img src="assets/cert-mba-bi.jpg" alt="MBA Business Intelligence IEP" class="about__cert-thumb" loading="lazy">
+            </picture>
+            <div class="about__cert-info">
+              <span class="about__cert-title">MBA BI & Big Data</span>
+              <span class="about__cert-institution">Instituto Europeo de Posgrado</span>
+              <span class="about__cert-year">2024</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         PROYECTOS - Grid de proyectos destacados
+         ======================================== -->
+    <section class="projects section" id="proyectos">
+      <div class="container">
+        <h2 class="text-center reveal">Mis Proyectos</h2>
+        <p class="text-center mb-3xl reveal">Soluciones técnicas que han transformado infraestructuras de datos</p>
+
+        <div class="projects-grid reveal-stagger">
+          <!-- Proyecto 1: Azure Data Factory -->
+          <article class="project-card project-card--video reveal">
+            <div class="project-card__media">
+              <video class="project-card__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+                <source src="assets/proyecto-etl.webm" type="video/webm">
+                <source src="assets/proyecto-etl.mp4" type="video/mp4">
+              </video>
+              <div class="project-card__overlay">
+                <a href="proyectos/azure-data-factory.html" class="project-card__overlay-btn" title="Ver detalles del proyecto Azure Data Factory">
+                  Ver Proyecto
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">
+                <svg width="14" height="14"><use href="assets/icons/icons.svg#icon-git-branch"/></svg>
+                ETL & Automatización
+              </span>
+              <h3 class="project-card__title">Azure Data Factory</h3>
+              <p class="project-card__description">Automatización de procesos ETL con Azure Data Factory para la integración y transformación de datos a escala empresarial.</p>
+              <ul class="project-card__tech">
+                <li><span class="project-card__tech-tag">Azure Data Factory</span></li>
+                <li><span class="project-card__tech-tag">Databricks</span></li>
+                <li><span class="project-card__tech-tag">SQL Server</span></li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="proyectos/azure-data-factory.html" class="project-card__link" title="Ver caso de estudio completo">
+                Ver caso de estudio
+                <svg class="project-card__link-icon" width="16" height="16"><use href="assets/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Migraciones de Bases de Datos -->
+          <article class="project-card project-card--video reveal">
+            <div class="project-card__media">
+              <video class="project-card__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+                <source src="assets/proyecto-migracion.webm" type="video/webm">
+                <source src="assets/proyecto-migracion.mp4" type="video/mp4">
+              </video>
+              <div class="project-card__overlay">
+                <a href="proyectos/migraciones-db.html" class="project-card__overlay-btn" title="Ver detalles del proyecto de Migraciones">
+                  Ver Proyecto
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">
+                <svg width="14" height="14"><use href="assets/icons/icons.svg#icon-database"/></svg>
+                Migración de Bases de Datos
+              </span>
+              <h3 class="project-card__title">Migraciones Oracle & SQL Server</h3>
+              <p class="project-card__description">Migración exitosa de bases de datos críticas entre Oracle y SQL Server con cero downtime y validación completa.</p>
+              <ul class="project-card__tech">
+                <li><span class="project-card__tech-tag">Oracle</span></li>
+                <li><span class="project-card__tech-tag">SQL Server</span></li>
+                <li><span class="project-card__tech-tag">Replicación</span></li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="proyectos/migraciones-db.html" class="project-card__link" title="Ver caso de estudio completo">
+                Ver caso de estudio
+                <svg class="project-card__link-icon" width="16" height="16"><use href="assets/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Optimización de Bases de Datos -->
+          <article class="project-card project-card--video reveal">
+            <div class="project-card__media">
+              <video class="project-card__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+                <source src="assets/proyecto-optimizacion.webm" type="video/webm">
+                <source src="assets/proyecto-optimizacion.mp4" type="video/mp4">
+              </video>
+              <div class="project-card__overlay">
+                <a href="proyectos/optimizacion-db.html" class="project-card__overlay-btn" title="Ver detalles del proyecto de Optimización">
+                  Ver Proyecto
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">
+                <svg width="14" height="14"><use href="assets/icons/icons.svg#icon-zap"/></svg>
+                Optimización de Rendimiento
+              </span>
+              <h3 class="project-card__title">Optimización PostgreSQL & SQL Server</h3>
+              <p class="project-card__description">Mejora del rendimiento en consultas críticas reduciendo tiempos de ejecución en un 70% mediante tuning avanzado.</p>
+              <ul class="project-card__tech">
+                <li><span class="project-card__tech-tag">PostgreSQL</span></li>
+                <li><span class="project-card__tech-tag">SQL Server</span></li>
+                <li><span class="project-card__tech-tag">Query Tuning</span></li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="proyectos/optimizacion-db.html" class="project-card__link" title="Ver caso de estudio completo">
+                Ver caso de estudio
+                <svg class="project-card__link-icon" width="16" height="16"><use href="assets/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: Cloud Azure/AWS -->
+          <article class="project-card project-card--video reveal">
+            <div class="project-card__media">
+              <video class="project-card__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+                <source src="assets/proyecto-datawarehouse.webm" type="video/webm">
+                <source src="assets/proyecto-datawarehouse.mp4" type="video/mp4">
+              </video>
+              <div class="project-card__overlay">
+                <a href="proyectos/cloud-azure-aws.html" class="project-card__overlay-btn" title="Ver detalles del proyecto Cloud">
+                  Ver Proyecto
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">
+                <svg width="14" height="14"><use href="assets/icons/icons.svg#icon-cloud"/></svg>
+                Cloud Computing
+              </span>
+              <h3 class="project-card__title">Soluciones Cloud Azure & AWS</h3>
+              <p class="project-card__description">Implementación de infraestructura cloud escalable y segura en Azure y AWS para entornos de producción críticos.</p>
+              <ul class="project-card__tech">
+                <li><span class="project-card__tech-tag">Azure</span></li>
+                <li><span class="project-card__tech-tag">AWS</span></li>
+                <li><span class="project-card__tech-tag">RDS</span></li>
+                <li><span class="project-card__tech-tag">EC2</span></li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="proyectos/cloud-azure-aws.html" class="project-card__link" title="Ver caso de estudio completo">
+                Ver caso de estudio
+                <svg class="project-card__link-icon" width="16" height="16"><use href="assets/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 5: Power BI -->
+          <article class="project-card project-card--video reveal">
+            <div class="project-card__media">
+              <video class="project-card__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+                <source src="assets/video-reel.webm" type="video/webm">
+                <source src="assets/video-reel.mp4" type="video/mp4">
+              </video>
+              <div class="project-card__overlay">
+                <a href="proyectos/power-bi.html" class="project-card__overlay-btn" title="Ver detalles del proyecto Power BI">
+                  Ver Proyecto
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">
+                <svg width="14" height="14"><use href="assets/icons/icons.svg#icon-chart"/></svg>
+                Business Intelligence
+              </span>
+              <h3 class="project-card__title">Dashboards Power BI</h3>
+              <p class="project-card__description">Diseño e implementación de dashboards interactivos para la toma de decisiones basada en datos en tiempo real.</p>
+              <ul class="project-card__tech">
+                <li><span class="project-card__tech-tag">Power BI</span></li>
+                <li><span class="project-card__tech-tag">DAX</span></li>
+                <li><span class="project-card__tech-tag">SSIS</span></li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="proyectos/power-bi.html" class="project-card__link" title="Ver caso de estudio completo">
+                Ver caso de estudio
+                <svg class="project-card__link-icon" width="16" height="16"><use href="assets/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Proyecto 6: Monitoreo -->
+          <article class="project-card project-card--video reveal">
+            <div class="project-card__media">
+              <video class="project-card__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
+                <source src="assets/proyecto-datawarehouse.webm" type="video/webm">
+                <source src="assets/proyecto-datawarehouse.mp4" type="video/mp4">
+              </video>
+              <div class="project-card__overlay">
+                <a href="proyectos/monitoreo.html" class="project-card__overlay-btn" title="Ver detalles del proyecto de Monitoreo">
+                  Ver Proyecto
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">
+                <svg width="14" height="14"><use href="assets/icons/icons.svg#icon-activity"/></svg>
+                Monitoreo de Infraestructura
+              </span>
+              <h3 class="project-card__title">Monitoreo con Grafana & Instana</h3>
+              <p class="project-card__description">Implementación de sistema de monitoreo integral para infraestructura crítica con alertas en tiempo real.</p>
+              <ul class="project-card__tech">
+                <li><span class="project-card__tech-tag">Grafana</span></li>
+                <li><span class="project-card__tech-tag">Instana</span></li>
+                <li><span class="project-card__tech-tag">Prometheus</span></li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="proyectos/monitoreo.html" class="project-card__link" title="Ver caso de estudio completo">
+                Ver caso de estudio
+                <svg class="project-card__link-icon" width="16" height="16"><use href="assets/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SERVICIOS - Lo que ofrezco
+         ======================================== -->
+    <section class="services section" id="servicios">
+      <div class="container">
+        <h2 class="text-center reveal">Servicios Profesionales</h2>
+        <p class="text-center mb-3xl reveal">Soluciones integrales para la gestión y optimización de tus datos</p>
+
+        <ul class="services__grid reveal-stagger">
+          <li class="reveal">
+            <button class="service-card" type="button" aria-expanded="false" aria-label="Administración de Bases de Datos. Haz clic para ver detalles.">
+              <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-database"/></svg>
+              <span class="service-card__title">Administración de Bases de Datos</span>
+              <span class="service-card__description">Gestión integral de SQL Server, PostgreSQL, MySQL, Oracle y MongoDB. Alto rendimiento y disponibilidad 24/7.</span>
+              <span class="service-card__details">
+                <span class="service-card__detail-item">• Monitoreo continuo de salud y rendimiento de servidores</span>
+                <span class="service-card__detail-item">• Configuración de backups y planes de mantenimiento</span>
+                <span class="service-card__detail-item">• Alta disponibilidad con AlwaysOn, clustering y réplicas</span>
+                <span class="service-card__detail-item">• Soporte preventivo y resolución de bloqueos o caídas</span>
+              </span>
+            </button>
+          </li>
+
+          <li class="reveal">
+            <button class="service-card" type="button" aria-expanded="false" aria-label="Optimización y Tuning SQL. Haz clic para ver detalles.">
+              <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-zap"/></svg>
+              <span class="service-card__title">Optimización y Tuning SQL</span>
+              <span class="service-card__description">Mejora del rendimiento de consultas, creación de índices y optimización de procesos para máxima eficiencia.</span>
+              <span class="service-card__details">
+                <span class="service-card__detail-item">• Reescritura y optimización de consultas SQL lentas</span>
+                <span class="service-card__detail-item">• Diseño y optimización de índices y estadísticas</span>
+                <span class="service-card__detail-item">• Análisis de cuellos de botella mediante planes de ejecución</span>
+                <span class="service-card__detail-item">• Configuración y ajuste de recursos de memoria y CPU</span>
+              </span>
+            </button>
+          </li>
+
+          <li class="reveal">
+            <button class="service-card" type="button" aria-expanded="false" aria-label="Consultoría Cloud Azure/AWS. Haz clic para ver detalles.">
+              <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-cloud"/></svg>
+              <span class="service-card__title">Consultoría Cloud Azure/AWS</span>
+              <span class="service-card__description">Diseño e implementación de soluciones escalables en la nube. Migración segura y optimización de costos.</span>
+              <span class="service-card__details">
+                <span class="service-card__detail-item">• Migración segura de bases de datos a la nube (PaaS/IaaS)</span>
+                <span class="service-card__detail-item">• Configuración de bases de datos elásticas y replicadas</span>
+                <span class="service-card__detail-item">• Diseño de políticas de seguridad en la nube</span>
+                <span class="service-card__detail-item">• Análisis de consumo para la optimización de costos</span>
+              </span>
+            </button>
+          </li>
+
+          <li class="reveal">
+            <button class="service-card" type="button" aria-expanded="false" aria-label="Implementación ETL. Haz clic para ver detalles.">
+              <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-git-branch"/></svg>
+              <span class="service-card__title">Implementación ETL</span>
+              <span class="service-card__description">Automatización de procesos de extracción, transformación y carga con Azure Data Factory y Databricks.</span>
+              <span class="service-card__details">
+                <span class="service-card__detail-item">• Diseño de flujos de datos automatizados (Data Pipelines)</span>
+                <span class="service-card__detail-item">• Limpieza y transformación de datos a gran escala</span>
+                <span class="service-card__detail-item">• Carga optimizada hacia Data Lakes y Synapse</span>
+                <span class="service-card__detail-item">• Integración y consolidación de fuentes de datos híbridas</span>
+              </span>
+            </button>
+          </li>
+
+          <li class="reveal">
+            <button class="service-card" type="button" aria-expanded="false" aria-label="Business Intelligence. Haz clic para ver detalles.">
+              <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-chart"/></svg>
+              <span class="service-card__title">Business Intelligence</span>
+              <span class="service-card__description">Diseño de dashboards y reportes con Power BI, SSIS, SSRS y SSAS para la toma de decisiones.</span>
+              <span class="service-card__details">
+                <span class="service-card__detail-item">• Creación de tableros interactivos dinámicos en Power BI</span>
+                <span class="service-card__detail-item">• Modelado multidimensional con cubos analíticos (SSAS)</span>
+                <span class="service-card__detail-item">• Integración de datos desde múltiples fuentes con SSIS</span>
+                <span class="service-card__detail-item">• Automatización de reportes operativos corporativos (SSRS)</span>
+              </span>
+            </button>
+          </li>
+
+          <li class="reveal">
+            <button class="service-card" type="button" aria-expanded="false" aria-label="Automatización de Procesos. Haz clic para ver detalles.">
+              <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-activity"/></svg>
+              <span class="service-card__title">Automatización de Procesos</span>
+              <span class="service-card__description">Automatización de tareas repetitivas y optimización de flujos de trabajo para mayor productividad.</span>
+              <span class="service-card__details">
+                <span class="service-card__detail-item">• Scripts automatizados en PowerShell, Bash y Python</span>
+                <span class="service-card__detail-item">• Alertas tempranas ante incidentes críticos (email, Slack)</span>
+                <span class="service-card__detail-item">• Automatización de respaldos y mantenimiento programado</span>
+                <span class="service-card__detail-item">• Flujos de trabajo desatendidos con agentes y crons</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================
+         HABILIDADES - Tech Stack visual
+         ======================================== -->
+    <section class="skills section" id="habilidades">
+      <div class="container">
+        <h2 class="text-center reveal">Habilidades Técnicas</h2>
+        <p class="text-center mb-3xl reveal">Haz clic en una categoría para explorarla</p>
+
+        <div class="skills__categories" id="skills-categories">
+
+          <!-- Categoría 1: Bases de datos -->
+          <div class="skills__category reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Categoría Bases de Datos">
+            <div class="skills__category-header">
+              <svg class="skills__category-icon" width="40" height="40" aria-hidden="true">
+                <use href="assets/icons/icons.svg#icon-database"/>
+              </svg>
+              <h3 class="skills__category-title">Bases de Datos</h3>
+            </div>
+            <div class="skills__category-details">
+              <p class="skills__category-description">Diseño y mantenimiento de esquemas, consultas optimizadas, procedimientos almacenados y configuración de réplicas en ambientes de alta exigencia.</p>
+              <ul class="skills__tags">
+                <li><button class="tag" type="button" title="SQL Server">SQL Server</button></li>
+                <li><button class="tag" type="button" title="PostgreSQL">PostgreSQL</button></li>
+                <li><button class="tag" type="button" title="MySQL">MySQL</button></li>
+                <li><button class="tag" type="button" title="Oracle">Oracle</button></li>
+                <li><button class="tag" type="button" title="MongoDB">MongoDB</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Categoría 2: Cloud -->
+          <div class="skills__category reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Categoría Cloud Computing">
+            <div class="skills__category-header">
+              <svg class="skills__category-icon" width="40" height="40" aria-hidden="true">
+                <use href="assets/icons/icons.svg#icon-cloud"/>
+              </svg>
+              <h3 class="skills__category-title">Cloud Computing</h3>
+            </div>
+            <div class="skills__category-details">
+              <p class="skills__category-description">Migración de arquitecturas hacia nubes públicas, creación de pipelines de datos (ETL) automatizados y cómputo distribuido.</p>
+              <ul class="skills__tags">
+                <li><button class="tag" type="button" title="Azure">Azure</button></li>
+                <li><button class="tag" type="button" title="AWS">AWS</button></li>
+                <li><button class="tag" type="button" title="Azure Data Factory">Azure Data Factory</button></li>
+                <li><button class="tag" type="button" title="Databricks">Databricks</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Categoría 3: Business Intelligence -->
+          <div class="skills__category reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Categoría Business Intelligence">
+            <div class="skills__category-header">
+              <svg class="skills__category-icon" width="40" height="40" aria-hidden="true">
+                <use href="assets/icons/icons.svg#icon-chart"/>
+              </svg>
+              <h3 class="skills__category-title">Business Intelligence</h3>
+            </div>
+            <div class="skills__category-details">
+              <p class="skills__category-description">Modelado de almacenes de datos (Data Warehouse), tableros visuales interactivos y cálculos de métricas avanzadas de negocio.</p>
+              <ul class="skills__tags">
+                <li><button class="tag" type="button" title="Power BI">Power BI</button></li>
+                <li><button class="tag" type="button" title="SSIS">SSIS</button></li>
+                <li><button class="tag" type="button" title="SSRS">SSRS</button></li>
+                <li><button class="tag" type="button" title="SSAS">SSAS</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Categoría 4: Sistemas -->
+          <div class="skills__category reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Categoría Sistemas y Herramientas">
+            <div class="skills__category-header">
+              <svg class="skills__category-icon" width="40" height="40" aria-hidden="true">
+                <use href="assets/icons/icons.svg#icon-activity"/>
+              </svg>
+              <h3 class="skills__category-title">Sistemas y Soporte</h3>
+            </div>
+            <div class="skills__category-details">
+              <p class="skills__category-description">Administración de sistemas operativos locales y virtuales, monitoreo del estado de servicios y alertas proactivas en tiempo real.</p>
+              <ul class="skills__tags">
+                <li><button class="tag" type="button" title="Linux">Linux</button></li>
+                <li><button class="tag" type="button" title="Windows Server">Windows Server</button></li>
+                <li><button class="tag" type="button" title="Grafana">Grafana</button></li>
+                <li><button class="tag" type="button" title="Instana">Instana</button></li>
+                <li><button class="tag" type="button" title="Prometheus">Prometheus</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Categoría 5: Lenguajes -->
+          <div class="skills__category reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Categoría Lenguajes de Programación">
+            <div class="skills__category-header">
+              <svg class="skills__category-icon" width="40" height="40" aria-hidden="true">
+                <use href="assets/icons/icons.svg#icon-zap"/>
+              </svg>
+              <h3 class="skills__category-title">Lenguajes</h3>
+            </div>
+            <div class="skills__category-details">
+              <p class="skills__category-description">Desarrollo de lógica de negocios en backend, consulta estructurada de datos y maquetación de interfaces web.</p>
+              <ul class="skills__tags">
+                <li><button class="tag" type="button" title="SQL">SQL</button></li>
+                <li><button class="tag" type="button" title="T-SQL">T-SQL</button></li>
+                <li><button class="tag" type="button" title=".NET">.NET</button></li>
+                <li><button class="tag" type="button" title="Java">Java</button></li>
+                <li><button class="tag" type="button" title="C#">C#</button></li>
+                <li><button class="tag" type="button" title="HTML">HTML</button></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TESTIMONIOS - Slider de testimonios
+         ======================================== -->
+    <section class="testimonials section" id="testimonios">
+      <div class="container">
+        <h2 class="text-center reveal">Testimonios</h2>
+        <p class="text-center mb-3xl reveal">Lo que dicen mis clientes y colegas</p>
+
+        <div class="testimonials__slider reveal" role="region" aria-roledescription="carrusel" aria-label="Testimonios de clientes">
+          <div class="testimonials__track" id="testimonials-track">
+            <div class="testimonials__slide">
+              <div class="testimonial-card">
+                <p class="testimonial-card__quote">"Sandra demostró una excepcional capacidad para optimizar nuestra infraestructura de bases de datos. Su conocimiento técnico y su habilidad para comunicar soluciones complejas son admirables."</p>
+                <div class="testimonial-card__author">
+                  <strong class="testimonial-card__name">Carlos Rodríguez</strong>
+                  <span class="testimonial-card__role">CTO en Tech Solutions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials__slide">
+              <div class="testimonial-card">
+                <p class="testimonial-card__quote">"La migración que lideró Sandra fue impecable. Cero downtime y una documentación técnica que facilitó enormemente el mantenimiento posterior. Totalmente recomendada."</p>
+                <div class="testimonial-card__author">
+                  <strong class="testimonial-card__name">María Fernández</strong>
+                  <span class="testimonial-card__role">Directora de TI en DataCorp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonials__slide">
+              <div class="testimonial-card">
+                <p class="testimonial-card__quote">"Gracias a la implementación de Power BI que realizó Sandra, nuestro equipo ahora toma decisiones basadas en datos en tiempo real. Ha transformado completamente nuestra cultura de datos."</p>
+                <div class="testimonial-card__author">
+                  <strong class="testimonial-card__name">Andrés López</strong>
+                  <span class="testimonial-card__role">Gerente de Operaciones en InnovaTech</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__controls">
+            <button class="icon-btn" id="testimonial-prev" aria-label="Testimonio anterior">
+              <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-prev"/></svg>
+            </button>
+
+            <div class="testimonials__dots" id="testimonial-dots" role="tablist" aria-label="Seleccionar testimonio">
+              <button class="testimonials__dot is-active" role="tab" aria-selected="true" aria-label="Testimonio 1"></button>
+              <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Testimonio 2"></button>
+              <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Testimonio 3"></button>
+            </div>
+
+            <button class="icon-btn" id="testimonial-next" aria-label="Siguiente testimonio">
+              <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-next"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CONTACTO - Formulario e información
+         ======================================== -->
+    <section class="contact section" id="contacto">
+      <div class="container">
+        <h2 class="text-center reveal">Contacto</h2>
+        <p class="text-center mb-3xl reveal">¿Tienes un proyecto en mente? Hablemos.</p>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <div class="contact__info-item">
+              <svg class="contact__info-icon" width="24" height="24"><use href="assets/icons/icons.svg#icon-location"/></svg>
+              <div class="contact__info-content">
+                <span class="contact__info-label">Ubicación</span>
+                <span class="contact__info-value">Bogotá, Colombia</span>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <svg class="contact__info-icon" width="24" height="24"><use href="assets/icons/icons.svg#icon-email"/></svg>
+              <div class="contact__info-content">
+                <span class="contact__info-label">Email</span>
+                <a href="mailto:paolagranadosp@hotmail.com" class="contact__info-value" title="Enviar email a Sandra Paola">paolagranadosp@hotmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact__info-item">
+              <svg class="contact__info-icon" width="24" height="24"><use href="assets/icons/icons.svg#icon-phone"/></svg>
+              <div class="contact__info-content">
+                <span class="contact__info-label">Teléfono</span>
+                <a href="tel:+573222296187" class="contact__info-value" title="Llamar a Sandra Paola">+57 322 229 6187</a>
+              </div>
+            </div>
+
+            <ul class="contact__social">
+              <li><a href="https://www.linkedin.com/in/sandra-paola-granados-pachon-79b990417/" class="contact__social-link" target="_blank" rel="noreferrer" title="Perfil de LinkedIn">
+                <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-linkedin"/></svg>
+              </a></li>
+              <li><a href="https://github.com/paolagranadosp11/" class="contact__social-link" target="_blank" rel="noreferrer" title="Perfil de GitHub">
+                <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-github"/></svg>
+              </a></li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="contact-form" action="" method="post">
+            <div class="form__group">
+              <label for="name" class="form__label form__label--required">Nombre</label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Tu nombre completo" required>
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label form__label--required">Correo Electrónico</label>
+              <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
+            </div>
+
+            <div class="form__group">
+              <label for="subject" class="form__label form__label--required">Asunto</label>
+              <input type="text" id="subject" name="subject" class="form__input" placeholder="¿En qué puedo ayudarte?" required>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label form__label--required">Mensaje</label>
+              <textarea id="message" name="message" class="form__textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" title="Enviar mensaje">
+              <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-send"/></svg>
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+       FOOTER - Pie de página
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copyright">Portafolio de Sandra Paola Granados Pachón.</p>
+        
+        <ul class="footer__links">
+          <li><a href="https://www.linkedin.com/in/sandra-paola-granados-pachon-79b990417/" class="footer__link" target="_blank" rel="noreferrer" title="LinkedIn">LinkedIn</a></li>
+          <li><a href="https://github.com/paolagranadosp11/" class="footer__link" target="_blank" rel="noreferrer" title="GitHub">GitHub</a></li>
+          <li><a href="mailto:paolagranadosp@hotmail.com" class="footer__link" title="Email">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal para certificados -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true" aria-label="Visor de certificados">
+    <div class="lightbox__overlay" tabindex="-1"></div>
+    <div class="lightbox__content">
+      <button class="lightbox__close" aria-label="Cerrar visor">&times;</button>
+      <div class="lightbox__image-wrapper">
+        <picture>
+          <source class="lightbox__source" srcset="" type="image/webp">
+          <img class="lightbox__img" src="" alt="" loading="lazy">
+        </picture>
+      </div>
+      <div class="lightbox__caption">
+        <h3 class="lightbox__title"></h3>
+        <p class="lightbox__institution"></p>
+        <p class="lightbox__description"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+</body>
+</html>
