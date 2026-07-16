@@ -57,7 +57,7 @@ portfolio/
 ├── index.html              # Landing page principal
 ├── .htaccess               # Configuración de caché, compresión GZIP/Brotli y headers
 ├── README.md               # Documentación del repositorio (este archivo)
-├── guion.md                # Guion de sustentación técnica del desarrollador
+├
 │
 ├── /css/                   # Hojas de estilo estructuradas
 │   ├── base.css            # Reset global, variables y animaciones base
