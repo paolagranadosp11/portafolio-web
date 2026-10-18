@@ -14,7 +14,7 @@
     min-height: 70px;
     background-color: var(--color-bg-primary);
     border-bottom: 0.0625rem solid var(--color-border-primary);
-    z-index: 200;
+    z-index: 10;
   }
 
   .header__container {
@@ -41,7 +41,7 @@
     pointer-events: none;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease;
-    z-index: 500;
+    z-index: 9;
   }
 
   /* Al añadir is-open, el panel aparece con un fade suave */
@@ -116,7 +116,7 @@
     cursor: pointer;
     gap: 0.35rem;
     padding: 0;
-    z-index: 600;
+    z-index: 10;
   }
 
   .header__menu-btn-line {
@@ -309,8 +309,7 @@
     border: 2px solid CanvasText;
   }
 
-  .tag,
-  .badge {
+  .tag {
     border: 1px solid CanvasText;
   }
 }

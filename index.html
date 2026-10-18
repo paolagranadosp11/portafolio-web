@@ -15,6 +15,7 @@
   <meta property="og:url" content="https://sandrapaola.dev">
   <meta property="og:image" content="assets/memoji-paola.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sandrapaola.dev">
   <meta name="twitter:title" content="Sandra Paola Granados | DBA Senior & Cloud Architect">
   <meta name="twitter:description" content="Portafolio profesional de Sandra Paola Granados - Especialista en bases de datos, cloud computing y business intelligence.">
   <meta name="twitter:image" content="assets/memoji-paola.jpg">
@@ -74,28 +75,34 @@
 
   <main>
     <!-- ========================================
-         HERO - Sección principal
+         HERO - Sección principal con video de fondo
          ======================================== -->
     <section class="hero" id="inicio">
+      <!-- Video de fondo decorativo (baja opacidad) -->
       <video class="hero__video" autoplay muted loop preload="none" poster="assets/memoji-paola.webp">
         <source src="assets/hero-video.webm" type="video/webm">
         <source src="assets/hero-video.mp4" type="video/mp4">
       </video>
+      <!-- Capa de overlay para legibilidad del texto -->
       <div class="hero__overlay"></div>
       
       <div class="hero__content">
+        <!-- Marquee con roles profesionales -->
         <div class="hero__subtitle-wrapper">
           <div class="hero__subtitle-track">
             <span>DBA Senior | Cloud Architect | BI Specialist</span>
             <span>DBA Senior | Cloud Architect | BI Specialist</span>
           </div>
         </div>
+        <!-- Nombre completo en dos líneas animadas -->
         <h1 class="hero__title">
           <span class="hero__title-line hero__title-line--1">Sandra Paola</span>
           <span class="hero__title-line hero__title-line--2">Granados Pachón</span>
         </h1>
+        <!-- Descripción profesional breve -->
         <p class="hero__description">Ingeniera de Sistemas con MBA en Business Intelligence y Big Data. Más de 10 años transformando datos en decisiones estratégicas.</p>
         
+        <!-- Botones de acción principal -->
         <div class="hero__cta">
           <a href="#proyectos" class="btn btn--primary" title="Ver mis proyectos">
             <svg width="20" height="20"><use href="assets/icons/icons.svg#icon-eye"/></svg>
@@ -110,13 +117,14 @@
     </section>
 
     <!-- ========================================
-         SOBRE MÍ - Perfil profesional
+         SOBRE MÍ - Perfil profesional y certificaciones
          ======================================== -->
     <section class="about section" id="sobre-mi">
       <div class="container">
         <div class="about__grid">
+          <!-- Columna izquierda: Foto de perfil -->
           <div class="about__image-wrapper reveal reveal--left">
-            <!-- El GIF animado se usa directamente porque no tiene alternativa WebP con animación equivalente -->
+            <!-- Foto de perfil con formato WebP y fallback JPG -->
             <picture>
               <source srcset="assets/memoji-paola.webp" type="image/webp">
               <img src="assets/memoji-paola.jpg" alt="Sandra Paola Granados - DBA Senior" class="about__image" loading="lazy">
@@ -124,6 +132,7 @@
             <div class="about__image-decoration"></div>
           </div>
 
+          <!-- Columna derecha: Texto descriptivo y estadísticas -->
           <div class="about__content">
             <h2 class="reveal">Sobre Mí</h2>
             <p class="about__text reveal">
@@ -133,6 +142,7 @@
               Mi enfoque combina la excelencia técnica con la visión estratégica del negocio, permitiéndome liderar proyectos de migración, optimización y automatización que generan un impacto real en las organizaciones.
             </p>
 
+            <!-- Contadores animados: experiencia, proyectos, certificaciones -->
             <ul class="about__stats reveal">
               <li class="about__stat">
                 <div class="about__stat-number" data-counter="10" data-suffix="+">10+</div>
@@ -197,8 +207,8 @@
          ======================================== -->
     <section class="projects section" id="proyectos">
       <div class="container">
-        <h2 class="text-center reveal">Mis Proyectos</h2>
-        <p class="text-center mb-3xl reveal">Soluciones técnicas que han transformado infraestructuras de datos</p>
+        <h2 class="section__title reveal">Mis Proyectos</h2>
+        <p class="section__subtitle reveal">Soluciones técnicas que han transformado infraestructuras de datos</p>
 
         <div class="projects-grid reveal-stagger">
           <!-- Proyecto 1: Azure Data Factory -->
@@ -410,19 +420,22 @@
     </section>
 
     <!-- ========================================
-         SERVICIOS - Lo que ofrezco
+         SERVICIOS - Lo que ofrezco (tarjetas expansibles)
          ======================================== -->
     <section class="services section" id="servicios">
       <div class="container">
-        <h2 class="text-center reveal">Servicios Profesionales</h2>
-        <p class="text-center mb-3xl reveal">Soluciones integrales para la gestión y optimización de tus datos</p>
+        <h2 class="section__title reveal">Servicios Profesionales</h2>
+        <p class="section__subtitle reveal">Soluciones integrales para la gestión y optimización de tus datos</p>
 
+        <!-- Grid de 6 servicios, cada uno es un botón expansible -->
         <ul class="services__grid reveal-stagger">
+          <!-- Servicio 1: Administración de Bases de Datos -->
           <li class="reveal">
             <button class="service-card" type="button" aria-expanded="false" aria-label="Administración de Bases de Datos. Haz clic para ver detalles.">
               <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-database"/></svg>
               <span class="service-card__title">Administración de Bases de Datos</span>
               <span class="service-card__description">Gestión integral de SQL Server, PostgreSQL, MySQL, Oracle y MongoDB. Alto rendimiento y disponibilidad 24/7.</span>
+              <!-- Detalles que se expanden al hacer clic -->
               <span class="service-card__details">
                 <span class="service-card__detail-item">• Monitoreo continuo de salud y rendimiento de servidores</span>
                 <span class="service-card__detail-item">• Configuración de backups y planes de mantenimiento</span>
@@ -432,6 +445,7 @@
             </button>
           </li>
 
+          <!-- Servicio 2: Optimización y Tuning SQL -->
           <li class="reveal">
             <button class="service-card" type="button" aria-expanded="false" aria-label="Optimización y Tuning SQL. Haz clic para ver detalles.">
               <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-zap"/></svg>
@@ -446,6 +460,7 @@
             </button>
           </li>
 
+          <!-- Servicio 3: Consultoría Cloud Azure/AWS -->
           <li class="reveal">
             <button class="service-card" type="button" aria-expanded="false" aria-label="Consultoría Cloud Azure/AWS. Haz clic para ver detalles.">
               <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-cloud"/></svg>
@@ -460,6 +475,7 @@
             </button>
           </li>
 
+          <!-- Servicio 4: Implementación ETL -->
           <li class="reveal">
             <button class="service-card" type="button" aria-expanded="false" aria-label="Implementación ETL. Haz clic para ver detalles.">
               <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-git-branch"/></svg>
@@ -474,6 +490,7 @@
             </button>
           </li>
 
+          <!-- Servicio 5: Business Intelligence -->
           <li class="reveal">
             <button class="service-card" type="button" aria-expanded="false" aria-label="Business Intelligence. Haz clic para ver detalles.">
               <svg class="service-card__icon" width="48" height="48" aria-hidden="true"><use href="assets/icons/icons.svg#icon-chart"/></svg>
@@ -510,8 +527,8 @@
          ======================================== -->
     <section class="skills section" id="habilidades">
       <div class="container">
-        <h2 class="text-center reveal">Habilidades Técnicas</h2>
-        <p class="text-center mb-3xl reveal">Haz clic en una categoría para explorarla</p>
+        <h2 class="section__title reveal">Habilidades Técnicas</h2>
+        <p class="section__subtitle reveal">Haz clic en una categoría para explorarla</p>
 
         <div class="skills__categories" id="skills-categories">
 
@@ -623,8 +640,8 @@
          ======================================== -->
     <section class="testimonials section" id="testimonios">
       <div class="container">
-        <h2 class="text-center reveal">Testimonios</h2>
-        <p class="text-center mb-3xl reveal">Lo que dicen mis clientes y colegas</p>
+        <h2 class="section__title reveal">Testimonios</h2>
+        <p class="section__subtitle reveal">Lo que dicen mis clientes y colegas</p>
 
         <div class="testimonials__slider reveal" role="region" aria-roledescription="carrusel" aria-label="Testimonios de clientes">
           <div class="testimonials__track" id="testimonials-track">
@@ -683,8 +700,8 @@
          ======================================== -->
     <section class="contact section" id="contacto">
       <div class="container">
-        <h2 class="text-center reveal">Contacto</h2>
-        <p class="text-center mb-3xl reveal">¿Tienes un proyecto en mente? Hablemos.</p>
+        <h2 class="section__title reveal">Contacto</h2>
+        <p class="section__subtitle reveal">¿Tienes un proyecto en mente? Hablemos.</p>
 
         <div class="contact__grid">
           <div class="contact__info reveal">
@@ -725,22 +742,22 @@
           <form class="form reveal" id="contact-form" action="" method="post">
             <div class="form__group">
               <label for="name" class="form__label form__label--required">Nombre</label>
-              <input type="text" id="name" name="name" class="form__input" placeholder="Tu nombre completo" required>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Tu nombre completo" required autocomplete="name">
             </div>
 
             <div class="form__group">
               <label for="email" class="form__label form__label--required">Correo Electrónico</label>
-              <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
+              <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required autocomplete="email">
             </div>
 
             <div class="form__group">
               <label for="subject" class="form__label form__label--required">Asunto</label>
-              <input type="text" id="subject" name="subject" class="form__input" placeholder="¿En qué puedo ayudarte?" required>
+              <input type="text" id="subject" name="subject" class="form__input" placeholder="¿En qué puedo ayudarte?" required autocomplete="off">
             </div>
 
             <div class="form__group">
               <label for="message" class="form__label form__label--required">Mensaje</label>
-              <textarea id="message" name="message" class="form__textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+              <textarea id="message" name="message" class="form__textarea" placeholder="Cuéntame sobre tu proyecto..." required autocomplete="off"></textarea>
             </div>
 
             <button type="submit" class="btn btn--primary btn--lg" title="Enviar mensaje">

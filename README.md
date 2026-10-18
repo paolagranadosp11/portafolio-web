@@ -1,4 +1,4 @@
-# Portafolio Profesional — Sandra Paola Granados Pachón
+# Portafolio de Sandra Paola Granados Pachón
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -8,121 +8,77 @@
   <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
 </p>
 
+Este es mi portafolio web personal. Es un sitio estático hecho a mano con HTML, CSS y JavaScript, sin frameworks ni librerías externas. Sirve para presentar mi perfil como DBA Senior y Cloud Architect, y para mostrar en detalle 6 de mis proyectos.
 
+## Qué contiene
 
-Este repositorio contiene el código fuente de mi **Portafolio Profesional Multi-Página**, diseñado y desarrollado a mano para presentar mi trayectoria y competencias como **DBA Senior** y **Cloud Architect**. El proyecto ha sido construido adhiriéndose estrictamente a estándares académicos y de rendimiento web (Lighthouse 100% en todas las categorías).
+El sitio se divide en una página principal y seis subpáginas, una por proyecto:
 
----
+- **Página principal** con las secciones de inicio, sobre mí, proyectos, servicios, habilidades, testimonios y contacto.
+- **Seis subpáginas de proyectos** dentro de la carpeta `proyectos/`, cada una con un video de demostración, la arquitectura usada, los resultados obtenidos y una galería de capturas.
 
-##  Descripción del Proyecto
+Algunas cosas que hacen el sitio más amigable:
 
-El sitio web está estructurado para ofrecer una experiencia ejecutiva, técnica y altamente interactiva (UX/UI). Consta de una landing page centralizada que resume mi perfil y 6 subpáginas detalladas para profundizar en la arquitectura y resultados de mis proyectos más críticos.
+- El menú se vuelve hamburguesa en móvil.
+- Los números de experiencia suben con una animación cuando los ves.
+- Los certificados se abren en un visor de pantalla completa (lightbox).
+- Los servicios y las habilidades son tarjetas que se despliegan al hacer clic.
+- Todo respeta la preferencia del sistema de reducir movimiento.
 
-### Secciones Clave
-*   **Inicio (Hero):** Presentación ejecutiva con fondo de vídeo y marquesina interactiva.
-*   **Sobre Mí:** Biografía, estadísticas y visor interactivo de certificaciones oficiales (IEP, PMP, etc.).
-*   **Proyectos:** Vitrina de proyectos con enlaces dinámicos a sus subpáginas de detalle técnico.
-*   **Servicios:** Tarjetas interactivas que despliegan detalles técnicos y estimaciones al hacer clic.
-*   **Habilidades:** Bloques de tecnologías estructurados como acordeones lógicos auto-colapsables.
-*   **Testimonios:** Slider automático con control inteligente de pausa al pasar el cursor.
-*   **Contacto:** Formulario con validación en tiempo real y retroalimentación asíncrona adaptativa.
-
----
-
-##  Stack Tecnológico y Buenas Prácticas
-
-El desarrollo del sitio se ha realizado de forma **puramente artesanal y nativa**, evitando el uso de frameworks o dependencias externas (cero React, Bootstrap, Tailwind o jQuery):
-
-*   **HTML5 Semántico y SEO:** Estructura limpia (`<header>`, `<nav>`, `<section>`, `<article>`). Carga de imágenes optimizadas (`<picture>`, WebP/JPG) y diferidas (`loading="lazy"`).
-*   **CSS3 Vanilla Modular:**
-    *   Metodología **BEM (Block, Element, Modifier)** combinada con **SUITCSS** para estados lógicos (`.is-open`, `.is-scrolled`).
-    *   Uso de **Custom Properties** (Variables CSS) para la paleta de colores y tokens de diseño.
-    *   **Tipografía Fluida** mediante la función `clamp()` en encabezados.
-    *   Reset avanzado con suavizado de fuentes (`antialiased`) y optimización de imágenes (`object-fit: cover`).
-    *   Transiciones fluidas limitadas a propiedades aceleradas por hardware (`transform`, `opacity`) sin usar transiciones globales (`transition: all`).
-*   **JavaScript Vanilla (ES6+):**
-    *   Código encapsulado en **IIFEs** (Expresiones de Función Invocadas Inmediatamente) para proteger el scope.
-    *   Nomenclatura orientada al DOM con sufijos `Handler`.
-    *   Uso de **Intersection Observer API** para apariciones dinámicas y animaciones eficientes.
-    *   Uso de **requestAnimationFrame** para sincronización con el ciclo de refresco de pantalla.
-    *   Destrucción automática de eventos visuales mediante `{ once: true }` y el evento `animationend`.
-    *   Cero redundancias lógicas (sin usar `DOMContentLoaded` gracias al atributo `defer` en scripts).
-
----
-
-##  Estructura de Directorios
+## Cómo está organizado
 
 ```text
-portfolio/
-├── index.html              # Landing page principal
-├── .htaccess               # Configuración de caché, compresión GZIP/Brotli y headers
-├── README.md               # Documentación del repositorio (este archivo)
-├
+portafolio-web/
+├── index.html              # Página principal
+├── README.md               # Este archivo
+├── .htaccess               # Compresión y caché para el servidor Apache
 │
-├── /css/                   # Hojas de estilo estructuradas
-│   ├── base.css            # Reset global, variables y animaciones base
-│   ├── main.css            # Estilos de maquetación y componentes interactivos
-│   └── responsive.css      # Consultas de medios para móviles y tablets
+├── css/
+│   ├── base.css            # Reset, variables de diseño y animaciones
+│   ├── main.css            # Estilos de cada componente y sección
+│   └── responsive.css      # Ajustes para móvil y tablet
 │
-├── /js/                    # Lógica JavaScript nativa (Vanilla)
-│   ├── main.js             # Lógica general (menú móvil, validación de formulario, scroll)
-│   └── interactions.js     # Interactividad de componentes (sliders, acordeones, modales)
+├── js/
+│   ├── main.js             # Menú, scroll suave, animaciones y formulario
+│   └── interactions.js     # Carrusel, lightbox, pestañas y acordeones
 │
-├── /proyectos/             # Subpáginas con estudios de caso específicos
-│   ├── azure-data-factory.html
-│   ├── cloud-azure-aws.html
-│   ├── migraciones-db.html
-│   ├── monitoreo.html
-│   ├── optimizacion-db.html
-│   └── power-bi.html
+├── proyectos/              # Las 6 subpáginas de proyectos
 │
-├── /assets/                # Recursos estáticos optimizados (WebP, MP4, WebM, SVG icons)
-└── /originales/            # Documentación académica de soporte (Memoria PDF, CV, fuentes crudas)
+├── assets/                 # Imágenes, videos e iconos
+└── originales/             # Videos e imágenes sin optimizar (el resto ya está convertido)
 ```
 
----
+## De qué está hecho
 
-##  Detalles de Pulido y UX Premium
+No uso React, Bootstrap, Tailwind ni jQuery: todo se escribe directamente.
 
-*   **Efecto Shrink-on-Scroll:** La cabecera se reduce suavemente de `80px` a `60px` y el avatar disminuye proporcionalmente cuando el usuario baja por la página, ganando una sombra sutil para flotar sobre el contenido.
-*   **Memojis sin Fondo:** Uso de la propiedad `mix-blend-mode: multiply;` que integra el avatar de memoji de forma transparente sobre la página crema, eliminando el fondo blanco de los archivos gráficos.
-*   **Cine-Video Player:** Las subpáginas de proyectos contienen reproductores enmarcados simulando una interfaz oscura de reproductor de cine, con sombras suaves multilaterales y una proporción perfecta de `16:9` sin deformaciones.
-*   **Menú Móvil Sólido:** Navegación en móvil con fondo 100% opaco y capas de `z-index` configuradas para evitar solapamientos molestos con tarjetas del cuerpo del sitio.
-*   **Accesibilidad Adaptativa (a11y):** Soporte integrado para movimiento reducido (`prefers-reduced-motion` reduciendo tiempos a `0.01ms`), soporte para contraste forzado del sistema operativo (`forced-colors: active`), y atributos dinámicos ARIA para lectores de pantalla.
+**En HTML** uso las etiquetas semánticas (`<header>`, `<nav>`, `<section>`, `<article>`), las imágenes con `<picture>` para entregar WebP con respaldo en JPG, y `loading="lazy"` para no cargar lo que no se ve.
 
----
+**En CSS** uso la metodología BEM: cada bloque tiene su nombre (`service-card`), sus elementos dentro (`service-card__title`) y sus modificadores (`service-card--featured`). Los colores, espacios y tamaños de letra viven en variables (`--color-accent-primary`) definidas una sola vez en `base.css`. Los tamaños de los títulos usan `clamp()` para crecer según la pantalla sin necesidad de muchas reglas.
 
-##  Configuración del Servidor (.htaccess)
+**En JavaScript** uso funciones con nombre (`closeMenuHandler`, `submitHandler`) dentro de un IIFE, que es una función que se ejecuta sola para que sus variables no se mezclen con las de otros archivos. Los dos scripts se cargan con `defer`, así que no hace falta esperar a `DOMContentLoaded`. Para las animaciones de aparición uso `IntersectionObserver` en vez de recalcular en cada evento de scroll.
 
-El archivo `.htaccess` del proyecto optimiza el rendimiento final en producción mediante directivas para el servidor Apache:
-*   **Compresión de Recursos:** Activa compresión **GZIP** y **Brotli** en archivos HTML, CSS, JavaScript, JSON y SVG.
-*   **Control de Caché del Navegador:** Configura cabeceras `ExpiresActive On` y `Cache-Control` con directivas `public, immutable` asignando un año para recursos estáticos (imágenes y fuentes) y un mes para hojas de estilo y scripts.
+## Cómo verlo en local
 
----
+No necesita compilación ni dependencias. Primero se obtiene el código y luego se sirve:
 
-##  Instalación y Visualización Local
+```bash
+git clone https://github.com/paolagranadosp11/portafolio-web.git
+cd portafolio-web
+```
 
-Dado que la aplicación utiliza tecnologías nativas del lado del cliente, no requiere compilación ni dependencias:
+Se puede abrir directo con `index.html` en el navegador, pero para que funcionen bien las rutas relativas de las subpáginas conviene servirlo con un servidor local:
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone https://github.com/paolagranadosp11/portfolio.git
-    ```
-2.  **Ejecutar localmente:**
-    *   Simplemente abre `index.html` en tu navegador.
-    *   Opcionalmente, inicia un servidor local ligero para validar la funcionalidad de rutas relativas o modales:
-        ```bash
-        # Usando Python
-        python -m http.server 8000
-        
-        # Usando Node.js (con live-server)
-        npx live-server
-        ```
+```bash
+python -m http.server 8000
+# o
+npx live-server
+```
 
----
+Luego abre `http://localhost:8000`.
 
-## ✉️ Contacto y Perfiles
+## Contacto
 
-*   **LinkedIn:** [Sandra Paola Granados Pachón](https://www.linkedin.com/in/sandra-paola-granados-pachon-79b990417/)
-*   **GitHub:** [@paolagranadosp11](https://github.com/paolagranadosp11/)
-*   **Correo Electrónico:** [paolagranadosp@hotmail.com](mailto:paolagranadosp@hotmail.com)
+- **LinkedIn:** [Sandra Paola Granados Pachón](https://www.linkedin.com/in/sandra-paola-granados-pachon-79b990417/)
+- **GitHub:** [@paolagranadosp11](https://github.com/paolagranadosp11/)
+- **Correo:** [paolagranadosp@hotmail.com](mailto:paolagranadosp@hotmail.com)

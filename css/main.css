@@ -51,37 +51,8 @@
 }
 .btn--secondary:active { transform: scale(0.98); }
 
-/* Botón simple sin fondo */
-.btn--ghost {
-  background-color: transparent;
-  color: var(--color-accent-primary);
-}
-.btn--ghost:hover { background-color: var(--color-bg-tertiary); }
-.btn--ghost:active { opacity: 0.7; }
-
 .btn--sm { padding: 0.5rem 1rem; font-size: var(--font-size-small); }
 .btn--lg { padding: 1rem 2rem; font-size: 1.125rem; }
-.btn--icon { padding: 0.75rem; }
-.btn--icon.btn--sm { padding: 0.5rem; }
-.btn--icon.btn--lg { padding: 1rem; }
-
-/* Pequeñas etiquetas redondeadas */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.75rem;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-medium);
-  line-height: 1;
-  border-radius: var(--radius-full);
-  background-color: var(--color-bg-tertiary);
-  color: var(--color-text-secondary);
-}
-.badge--primary { background-color: var(--color-badge-primary); color: var(--color-accent-primary); }
-.badge--success { background-color: var(--color-badge-success); color: var(--color-accent-success); }
-.badge--warning { background-color: var(--color-badge-warning); color: var(--color-gold-primary); }
-.badge--danger { background-color: var(--color-badge-danger); color: var(--color-accent-danger); }
 
 /* Etiquetas de tecnologías */
 .tag {
@@ -106,67 +77,6 @@
 .tag:active {
   background-color: var(--color-bg-tertiary);
   transform: scale(0.97);
-}
-.tag__icon { width: 1rem; height: 1rem; }
-
-/* Carteles flotantes de información */
-.tooltip { position: relative; }
-.tooltip__content {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-0.5rem);
-  padding: 0.5rem 0.75rem;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-  border: 0.0625rem solid var(--color-border-primary);
-  border-radius: var(--radius-sm);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-fast), visibility var(--transition-fast), transform var(--transition-fast);
-  pointer-events: none;
-  z-index: 10;
-  box-shadow: var(--shadow-md);
-}
-.tooltip:hover .tooltip__content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(-0.25rem);
-}
-
-/* Líneas de separación elegantes con texto */
-.separator {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  color: var(--color-text-muted);
-  font-family: var(--font-body);
-  font-size: var(--font-size-small);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-.separator::before,
-.separator::after {
-  content: '';
-  flex: 1;
-  height: 0.0625rem;
-  background-color: var(--color-border-primary);
-}
-
-/* Efecto de carga esqueleto */
-.skeleton {
-  background: linear-gradient(90deg, var(--color-bg-tertiary) 25%, var(--color-bg-secondary) 50%, var(--color-bg-tertiary) 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite both;
-  border-radius: var(--radius-md);
-}
-@keyframes skeleton-loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
 }
 
 /* Botones redondos con icono */
@@ -194,32 +104,6 @@
 }
 .icon-btn svg { width: 1.25rem; height: 1.25rem; }
 
-/* Fotos de perfil redondeadas */
-.avatar {
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: var(--radius-full);
-  object-fit: cover;
-  border: 0.125rem solid var(--color-border-primary);
-}
-.avatar--lg { width: 6.25rem; height: 6.25rem; }
-.avatar--xl { width: 9.375rem; height: 9.375rem; }
-
-/* Barra de progreso */
-.progress {
-  width: 100%;
-  height: 0.5rem;
-  background-color: var(--color-bg-tertiary);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-.progress__bar {
-  height: 100%;
-  background-color: var(--color-accent-primary);
-  border-radius: var(--radius-full);
-  transition: width var(--transition-slow);
-}
-
 /* ========================================
    2. CABECERA Y LOGO
    ======================================== */
@@ -231,7 +115,7 @@
   height: var(--header-height);
   background-color: var(--color-bg-primary);
   border-bottom: 0.0625rem solid var(--color-border-primary);
-  z-index: 200;
+  z-index: 10;
   /* Transición suave al reducirse con el scroll */
   transition: height 0.3s ease, box-shadow 0.3s ease;
 }
@@ -317,7 +201,7 @@
 .header__logo-role {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   color: var(--color-text-tertiary);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -520,6 +404,17 @@
 /* ========================================
    4. SECCIONES: SOBRE MÍ, SERVICIOS Y HABILIDADES
    ======================================== */
+
+/* Título y subtítulo centrados que se repiten en varias secciones */
+.section__title {
+  text-align: center;
+}
+
+.section__subtitle {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
 .about { background-color: var(--color-bg-primary); }
 .about__grid {
   display: grid;
@@ -625,7 +520,7 @@
 .about__cert-info { display: flex; flex-direction: column; gap: 0.125rem; text-align: left; }
 .about__cert-title { font-weight: var(--font-weight-semibold); color: var(--color-text-primary); font-size: var(--font-size-body); }
 .about__cert-institution { font-size: var(--font-size-small); color: var(--color-text-secondary); line-height: 1.3; }
-.about__cert-year { font-size: var(--font-size-xs); color: var(--color-accent-primary); font-weight: var(--font-weight-semibold); }
+.about__cert-year { font-size: var(--font-size-small); color: var(--color-accent-primary); font-weight: var(--font-weight-semibold); }
 
 /* Sección Servicios */
 .services { background-color: var(--color-bg-secondary); }
@@ -866,7 +761,7 @@
   align-items: center;
   gap: var(--space-xs);
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-gold-primary);
   text-transform: uppercase;
@@ -876,7 +771,7 @@
 .project-card__title { font-size: var(--font-size-h4); font-weight: var(--font-weight-semibold); color: var(--color-text-primary); margin-bottom: var(--space-sm); line-height: 1.3; }
 .project-card__description { font-family: var(--font-body); font-size: var(--font-size-small); color: var(--color-text-secondary); line-height: 1.6; margin-bottom: var(--space-lg); flex: 1; }
 .project-card__tech { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-bottom: var(--space-md); list-style: none; }
-.project-card__tech-tag { padding: 0.25rem 0.5rem; font-family: var(--font-body); font-size: 0.7rem; font-weight: var(--font-weight-medium); color: var(--color-text-secondary); background-color: var(--color-bg-tertiary); border-radius: var(--radius-sm); }
+.project-card__tech-tag { padding: 0.25rem 0.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: var(--font-weight-medium); color: var(--color-text-secondary); background-color: var(--color-bg-tertiary); border-radius: var(--radius-sm); }
 .project-card__footer { display: flex; align-items: center; justify-content: space-between; padding: var(--space-md) var(--space-lg); border-top: 0.0625rem solid var(--color-border-primary); background-color: var(--color-bg-primary); }
 
 .project-card__link {
@@ -1142,6 +1037,14 @@
   background: linear-gradient(90deg, var(--color-accent-primary), var(--color-gold-primary), transparent);
 }
 
+/* Migas de pan de las subpáginas de proyecto */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
 .breadcrumb__list {
   display: flex;
   align-items: center;
@@ -1277,6 +1180,13 @@
   list-style: none;
 }
 
+/* Fila de enlaces (botones) dentro de una sección del detalle */
+.project-detail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
 /* Navegación entre proyectos: fila balanceada con estilo */
 .project-detail__nav {
   display: flex;
@@ -1294,7 +1204,7 @@
 .lightbox {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 8;
   display: flex;
   align-items: center;
   justify-content: center;
